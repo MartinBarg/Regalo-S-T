@@ -4,11 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mensaje especial</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  </style>
 </head>
-<body style="text-align: center; padding-top: 50px;" onclick="activarAudio()">
+<body onclick="activarAudio()">
   <h1>ShivaTokas ❤️</h1>
   <audio id="audio">
-  <source src="Regalo S&T.m4a" type="audio/mp4">
+  <source src="regalo-syt.m4a" type="audio/mp4">
 </audio>
 
 <script>
@@ -18,7 +30,7 @@
 
     function activarAudio() {
       if (audioEnCurso) return;
-      document.getElementById("audio").play();
+      audio.play();
       audioEnCurso = true;
     }
 
