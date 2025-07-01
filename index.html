@@ -6,12 +6,14 @@
   <title>Mensaje especial</title>
 </head>
 <body style="text-align: center; padding-top: 50px;" onclick="activarAudio()">
-  <h1>Shiva & Tokas ❤️</h1>
+  <h1>ShivaTokas ❤️</h1>
   <audio id="audio">
   <source src="Regalo S&T.m4a" type="audio/mp4">
 </audio>
 
 <script>
+
+    const audio = document.getElementById("audio");
     let audioEnCurso = false;
 
     function activarAudio() {
@@ -24,7 +26,7 @@
     audio.addEventListener("ended", () => {
       audioEnCurso = false;
     });
-    
+
   </script>
 </body>
 </html>
