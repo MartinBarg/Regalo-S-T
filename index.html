@@ -5,10 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mensaje especial</title>
 </head>
-<body style="text-align: center; padding-top: 50px;" onclick="document.getElementById('audio').play()">
+<body style="text-align: center; padding-top: 50px;" onclick="activarAudio()">
   <h1>Shiva & Tokas ❤️</h1>
-  <audio id="audio" autoplay muted>
+  <audio id="audio">
   <source src="Regalo S&T.m4a" type="audio/mp4">
 </audio>
+
+<script>
+    let audioEnCurso = false;
+
+    function activarAudio() {
+      if (audioEnCurso) return;
+      document.getElementById("audio").play();
+      audioEnCurso = true;
+    }
+
+    // Cuando termina el audio, se puede volver a activar
+    audio.addEventListener("ended", () => {
+      audioEnCurso = false;
+    });
+    
+  </script>
 </body>
 </html>
